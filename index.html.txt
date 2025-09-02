@@ -1,0 +1,62 @@
+<!doctype html>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="container">
+<div class="brand">Ma Vitrine</div>
+<nav>
+<a href="#services">Services</a>
+<a href="#a-propos">À propos</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<div class="container">
+<h1>Votre titre accrocheur</h1>
+<p>Une phrase claire qui explique ce que vous proposez.</p>
+<a class="btn" href="#contact">Me contacter</a>
+</div>
+</section>
+
+
+<section id="services" class="container grid">
+<article class="card">
+<h2>Service 1</h2>
+<p>Brève description de votre service phare.</p>
+</article>
+<article class="card">
+<h2>Service 2</h2>
+<p>Un second service ou offre.</p>
+</article>
+<article class="card">
+<h2>Service 3</h2>
+<p>Un troisième service si besoin.</p>
+</article>
+</section>
+
+
+<section id="a-propos" class="container">
+<h2>À propos</h2>
+<p>Quelques lignes sur vous / votre entreprise. Votre mission, vos valeurs, votre zone d’intervention, etc.</p>
+</section>
+
+
+<section id="contact" class="container">
+<h2>Contact</h2>
+<p>Écrivez‑moi à <a href="mailto:contact@mondomaine.com">contact@mondomaine.com</a> ou via les réseaux sociaux.</p>
+<p>Adresse (optionnel) — Téléphone (optionnel)</p>
+</section>
+
+
+<footer>
+<div class="container">
+<small>© <span id="year"></span> Mon Entreprise — Tous droits réservés</small>
+</div>
+</footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
