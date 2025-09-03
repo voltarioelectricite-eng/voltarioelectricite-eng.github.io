@@ -1,112 +1,19 @@
-:root { 
-  --max: 1100px; 
-}
+:root { --max: 1100px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; line-height: 1.6; color: #1f2937; }
+.container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
+header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; background: #fff; }
+.brand { font-weight: 700; }
+nav a { margin-left: 1rem; text-decoration: none; color: inherit; }
+.hero { background: #f9fafb; padding: 4rem 0; text-align: center; }
+.btn { display: inline-block; padding: .75rem 1rem; border-radius: .75rem; border: 1px solid #111827; text-decoration: none; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; background: #fff; }
+footer { margin-top: 3rem; border-top: 1px solid #e5e7eb; padding: 1rem 0; text-align: center; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
 
-* { 
-  box-sizing: border-box; 
-}
-
-body { 
-  margin: 0; 
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; 
-  line-height: 1.6; 
-  color: #1f2937; 
-}
-
-.container { 
-  max-width: var(--max); 
-  margin: 0 auto; 
-  padding: 1rem; 
-}
-
-/* -------- Header -------- */
-header { 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  border-bottom: 1px solid #e5e7eb; 
-  position: sticky; 
-  top: 0; 
-  background: #fff; 
-}
-
-/* Logo */
+/* --- Ajout pour le logo --- */
 header .logo img {
-  height: 60px;   /* logo petit (ajuste la valeur si tu veux + ou - grand) */
+  height: 40px; /* petit logo (ajuste la valeur si besoin) */
   width: auto;
-  display: block;
-}
-
-/* Marque / texte si utilisé */
-.brand { 
-  font-weight: 700; 
-}
-
-/* Navigation */
-nav a { 
-  margin-left: 1rem; 
-  text-decoration: none; 
-  color: inherit; 
-}
-
-nav a:hover {
-  color: #007bff; /* un bleu au survol */
-}
-
-/* -------- Hero -------- */
-.hero { 
-  background: #f9fafb; 
-  padding: 4rem 0; 
-  text-align: center; 
-}
-
-.btn { 
-  display: inline-block; 
-  padding: .75rem 1rem; 
-  border-radius: .75rem; 
-  border: 1px solid #111827; 
-  text-decoration: none; 
-}
-
-/* -------- Grid / Services -------- */
-.grid { 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 1rem; 
-}
-
-.card { 
-  border: 1px solid #e5e7eb; 
-  border-radius: .75rem; 
-  padding: 1rem; 
-  background: #fff; 
-}
-
-/* -------- Footer -------- */
-footer { 
-  margin-top: 3rem; 
-  border-top: 1px solid #e5e7eb; 
-  padding: 1rem 0; 
-  text-align: center; 
-}
-
-/* -------- Responsive -------- */
-@media (max-width: 800px) { 
-  .grid { 
-    grid-template-columns: 1fr; 
-  }
-  
-  header { 
-    flex-direction: column; 
-    align-items: flex-start; 
-  }
-
-  nav {
-    margin-top: 0.5rem;
-  }
-
-  nav a { 
-    margin-left: 0; 
-    margin-right: 1rem; 
-  }
 }
