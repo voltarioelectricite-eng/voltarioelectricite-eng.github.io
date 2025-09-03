@@ -27,15 +27,12 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* menu poussé à droite car logo est fixe */
+  justify-content: flex-end; /* menu collé à droite */
   border-bottom: 1px solid #e5e7eb;
   background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 900;
+  padding-left: 70px; /* pour que le menu ne chevauche pas le logo */
 }
 
-/* --- Logo figé en haut à gauche --- */
 .logo {
   position: fixed;
   top: 10px;
@@ -44,7 +41,7 @@ header {
 }
 
 .logo img {
-  height: 13px; /* taille divisée par 3 (si c'était 40px avant) */
+  height: 40px; /* Taille réduite (environ 3x plus petit qu’avant) */
   width: auto;
   display: block;
 }
@@ -170,3 +167,4 @@ footer {
     font-size: 2rem;
   }
 }
+
