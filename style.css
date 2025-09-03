@@ -1,6 +1,6 @@
 :root {
   --max: 1100px;
-  --primary: #008080; /* couleur principale (vert/bleu) – tu peux changer */
+  --primary: #008080;
   --dark: #111827;
   --light: #f9fafb;
 }
@@ -17,7 +17,6 @@ body {
   background: #fff;
 }
 
-/* --- Containers généraux --- */
 .container {
   max-width: var(--max);
   margin: 0 auto;
@@ -28,20 +27,29 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end; /* menu poussé à droite car logo est fixe */
   border-bottom: 1px solid #e5e7eb;
+  background: #fff;
   position: sticky;
   top: 0;
-  background: #fff;
+  z-index: 900;
+}
+
+/* --- Logo figé en haut à gauche --- */
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
   z-index: 1000;
 }
 
-header .logo img {
-  height: 40px; /* petit logo à gauche */
+.logo img {
+  height: 13px; /* taille divisée par 3 (si c'était 40px avant) */
   width: auto;
   display: block;
 }
 
+/* --- Navigation --- */
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
@@ -61,7 +69,7 @@ nav a:hover {
   text-align: center;
   min-height: 70vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url("images/hero.jpg") center/cover no-repeat; /* à remplacer par ton image */
+              url("images/hero.jpg") center/cover no-repeat;
   color: #fff;
   padding: 4rem 1rem;
 }
