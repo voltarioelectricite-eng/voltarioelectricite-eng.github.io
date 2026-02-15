@@ -1,78 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Voltario — Borne de recharge IRVE</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltario</title>
+<meta name="description" content="Flavio Seminerio, artisan électricien. Installation, rénovation, dépannage et mise aux normes. Expertise, proximité et transparence.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --anthracite:#373C40;
+    --jaune-vif:#F2D230;
+    --jaune-profond:#F2C230;
+    --orange:#F2B33D;
+    --blanc:#F2F2F2;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family:'Montserrat Alternates', sans-serif;
+    background:var(--blanc);
+    color:var(--anthracite);
+    line-height:1.6;
+}
+
+section {
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h1, h2 {
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+h2 {
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero {
+    background:var(--anthracite);
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1 {
+    font-size:2.5rem;
+}
+
+.hero p {
+    margin:20px 0;
+    font-weight:200;
+}
+
+.btn {
+    display:inline-block;
+    padding:14px 28px;
+    background:var(--jaune-vif);
+    color:var(--anthracite);
+    text-decoration:none;
+    font-weight:500;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover {
+    background:var(--orange);
+}
+
+.services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.card {
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    text-align:center;
+}
+
+.card h3 {
+    margin-bottom:15px;
+}
+
+.why {
+    text-align:center;
+}
+
+.contact {
+    text-align:center;
+}
+
+form {
+    max-width:600px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea {
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-family:inherit;
+}
+
+textarea {
+    resize:none;
+    height:120px;
+}
+
+footer {
+    background:var(--anthracite);
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    font-size:0.9rem;
+}
+</style>
 </head>
+
 <body>
-  <!-- Logo fixé -->
-  <div class="logo">
-    <a href="/">
-      <img src="images/logo.JPEG" alt="Logo Voltario">
-    </a>
-  </div>
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#a-propos">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<section class="hero">
+    <h1>VOLTARIO</h1>
+    <p>L’électricien près de chez vous.<br>Expertise. Proximité. Transparence.</p>
+    <a href="#contact" class="btn">Demander un devis</a>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Borne de recharge IRVE</h1>
-      <p>Connectez votre véhicule à l'avenir</p>
-      <a class="btn" href="#contact">Nous contacter</a>
+<section>
+    <h2>Mes services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Installation électrique</h3>
+            <p>Réalisation d’installation électique pour maison ou local professionnel.</p>
+        </div>
+        <div class="card">
+            <h3>Rénovation</h3>
+            <p>Remise aux normes de votre installation électrique selon la norme NFC 15-100 pour plus de sécurité.</p>
+        </div>
+        <div class="card">
+            <h3>Dépannage en 24h</h3>
+            <p>Intervention rapide pour pannes, coupures ou dysfonctionnements.</p>
+        </div>
+        <div class="card">
+            <h3>Sécurité et interphonie</h3>
+            <p>Pose de caméras de surveillances et interphones connectés à votre smartphone.</p>
+        </div>
+       <div class="card">
+            <h3>Borne IRVE</h3>
+            <p>Pose de borne de recharge adaptée à vos besoins.</p>
+        </div>
+       <div class="card">
+            <h3>Pompe à chaleur Air/Air</h3>
+            <p>Climatisation et chauffage pour un confort été comme hiver.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Services -->
-  <section id="services" class="container grid">
-    <article class="card">
-      <h2>Mise en conformité de l'installation électrique</h2>
-      <p>Selon la norme NFC 15-100.</p>
-    </article>
-    <article class="card">
-      <h2>Dépannage</h2>
-      <p>Nous intervenons pour identifier, réparer et rétablir votre installation.</p>
-    </article>
-    <article class="card">
-      <h2>Installation de système de surveillance</h2>
-      <p>Contrôlez votre système de surveillance à distance grâce à nos systèmes connectés.</p>
-    </article>
-  </section>
-
-  <!-- A propos -->
-  <section id="a-propos" class="container">
-    <h2>À propos</h2>
+<section class="why">
+    <h2>Pourquoi Voltario ?</h2>
     <p>
-      Chez Voltario, nous allions expertise et savoir-faire pour offrir des solutions électriques sûres et adaptées à vos besoins.
-      Notre mission : garantir la sécurité de vos installations tout en construisant une relation durable basée sur la confiance.
+        Un artisan local, un contact direct, un travail soigné.<br><br>
+        Chez Voltario, vous échangez avec un professionnel qui vous écoute,
+        vous explique et vous accompagne à chaque étape.
     </p>
-  </section>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="container">
+<section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Mail: f.seminerio@voltario.fr</p>
-    <p>Téléphone: 07 64 26 26 89</p>
-  </section>
+    <p>Besoin d’un devis ou d’un renseignement ?</p>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <small>© <span id="year"></span> Voltario — Tous droits réservés</small>
-    </div>
-  </footer>
+    <form>
+        <input type="text" placeholder="Nom" required>
+        <input type="tel" placeholder="Téléphone" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button class="btn" type="submit">Envoyer la demande</button>
+    </form>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <p style="margin-top:20px;">
+        📞 07 64 26 26 89<br>
+        ✉ f.seminerio@voltario.fr
+    </p>
+</section>
+
+<footer>
+    © 2026 Voltario – Électricien local
+</footer>
+
 </body>
 </html>
